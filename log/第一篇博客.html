@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的技术与生活——log | Hexo</title>
+  <title>我的技术与生活——第一篇博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的技术与生活——log`
+    document.title = `我的技术与生活——第一篇博客`
   </script>
 <meta name="generator" content="Hexo 7.1.1"></head>
 
@@ -340,32 +340,93 @@
       <div id="main-container" class="main-container">
 
 
-  <link rel="stylesheet" href="/css/partial/log.css" />
+  <link rel="stylesheet" href="/css/partial/article.css" />
 
-
-
-<div class="log">
-  
-    <div class="log-item">
-      <h2 class="log-title">
-        <span>2024-04-02 22:00:45</span>
-        <span>星期二</span>
-      </h2>
-      <h1 class="log-main-title"><a href="/./log/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2.html">第一篇博客</a></h1>
-      <div class="log-wrapper false" style="max-height: 1000px;">
-        <article class="article-content"><p>不知为何，玉川就是觉得玉川应该建一个博客。</p>
+<div class="article-container">
+  <div class="article">
+    <h1 class="article-title">第一篇博客</h1>
+    <div class="article-info">
+      <div class="article-info--item">
+        <div class="article-info--info">
+          
+          
+          <p class="article-info--date">日期：2024-04-02 22:00:45</p>
+        </div>
+        <img src="/imgs/default-cover.webp" alt="" class="article-cover">
+      </div>
+    </div>
+    <article class="article-content markdown-body">
+      <p>不知为何，玉川就是觉得玉川应该建一个博客。</p>
 <p>建了这个博客之后，有什么想做的事吗？有什么想传达的东西吗？</p>
 <p>说实在的，毕竟是心血来潮，玉川自然是没有想好这些事情的，还是走一步看一步。</p>
 <p>兴许是感怀天地，想到只有玉川才能从头到尾地见证玉川的一生吧。</p>
 <p>哈哈。</p>
-</article>
+
+    </article>
+    
+    <div class="read-nums">
+      <!-- id 将作为查询条件 -->
+      <span id="log/第一篇博客.html" class="leancloud_visitors" data-flag-title="Your Article Title">
+        <em class="post-meta-item-text">浏览量</em>
+        <i class="leancloud-visitors-count"></i>
+      </span>
+    </div>
+    <div class="comments-intro">
+      <h2>评论区</h2>
+      <p>欢迎你留下宝贵的意见，昵称输入QQ号会显示QQ头像哦~</p>
+    </div>
+    <div id="vcomments" class="vcomments"></div>
+    
+  </div>
+  <div class="article-catelogue">
+    <div class="article-catelogue--wrapper">
+      <div class="catelogue catelogue-1">
+        <h3>目录</h3>
         
       </div>
+      
     </div>
-  
-  
+  </div>
 </div>
 
+
+<script>
+  // var定义，避免pjax重新进来造成的重复声明错误
+  var config = JSON.parse('{"enable":true,"appId":"Pf8zCXGEH1qsprnWfikVVujL-gzGzoHsz","appKey":"qOqoiUHhH1TGtLRUYURkLRQX","placeholder":"请留下你宝贵的意见吧~","meta":["nick"],"recordIP":true,"visitor":true,"enableQQ":true}')
+  new Valine({
+    el: '#vcomments',
+    appId: config.appId,
+    appKey: config.appKey,
+    placeholder: config.placeholder,
+    meta: config.meta,
+    recordIP: config.recordIP,
+    visitor: config.visitor,
+    enableQQ: config.enableQQ,
+    path: 'log/第一篇博客.html'
+  })
+</script>
+
+
+<script>
+  $(document).on('pjax:complete', function() {
+    const tocs = document.querySelector('.toc')
+    const links = tocs ? tocs.querySelectorAll('a') : []
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        const href = decodeURIComponent(e.href)
+        href.search(/#(.*)/)
+        const id = RegExp.$1
+        const target = document.querySelector('#' + id)
+        const top = target.offsetTop
+        document.documentElement.scrollTo({
+          top: top - 100,
+          behavior: 'smooth'
+        })
+        e.preventDefault()
+      })
+    })
+  })
+</script> 
 
 </div>
       <div class="main-right-wrapper"><div class="main-right">
