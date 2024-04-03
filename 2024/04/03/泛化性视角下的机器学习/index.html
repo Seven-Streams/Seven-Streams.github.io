@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的技术与生活——tags | Hexo</title>
+  <title>我的技术与生活——泛化性视角下的机器学习 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的技术与生活——tags`
+    document.title = `我的技术与生活——泛化性视角下的机器学习`
   </script>
 <meta name="generator" content="Hexo 7.1.1"></head>
 
@@ -340,14 +340,144 @@
       <div id="main-container" class="main-container">
 
 
-  <link rel="stylesheet" href="/css/partial/tags.css" />
+  <link rel="stylesheet" href="/css/partial/article.css" />
 
-<div class="tags">
-  <h2 class="tags-title">小站标签</h2>
-  <div class="tags-list">
+<div class="article-container">
+  <div class="article">
+    <h1 class="article-title">泛化性视角下的机器学习</h1>
+    <div class="article-info">
+      <div class="article-info--item">
+        <div class="article-info--info">
+          
+          <div class="article-info--categories">
+            <span>分类：</span>
+            <a class="category-link" href="/categories/lecture-notes/">Lecture Notes</a>
+          </div>
+          
+          
+          <div class="article-info--tags">
+            <span>标签：</span>
+            
+          </div>
+          
+          <p class="article-info--date">日期：2024-04-03 16:55:57</p>
+        </div>
+        <img src="/imgs/default-cover.webp" alt="" class="article-cover">
+      </div>
+    </div>
+    <article class="article-content markdown-body">
+      <h1 id="Given-By-Xiaolin-Huang"><a href="#Given-By-Xiaolin-Huang" class="headerlink" title="Given By Xiaolin Huang"></a>Given By Xiaolin Huang</h1><p>人工智能是什么？</p>
+<p>机器的决策。</p>
+<p>Deep Reinforcement Learning将强化学习后的估值函数改为神经网络进行预测。</p>
+<p>learning：用函数去逼近。</p>
+<p>生成模型：完形填空。猜测下一个词。</p>
+<p>泛化问题：训练集和验证集上的效果。</p>
+<p>泛化误差小于等于训练误差和结构误差之和。</p>
+<p>废话。</p>
+<p>线性模型：最小二乘法，线性分别法、主成分分析、典型信息分析。</p>
+<p>不确定度带来信息。</p>
+<p>主成分分析需要做到：将数据的不确定度更好地保存。换而言之，即保存其特征。</p>
+<p>非线性模型：核函数、特征提取、局部方法（e.g.决策树，局部线性，但整体是非线性的。                                                                                                                                                                                                </p>
+<p>最优化：线性、凸优化、非凸优化</p>
+<p>深度神经网络</p>
+<p>为什么深度的网络比宽度的好？</p>
+<p>结构问题：使用简单的模型来防止过拟合。</p>
+<p>比如，岭回归，LASSO等进行正则化约束。</p>
+<p>什么可以导致一个好的分类器？大数据。</p>
+<p>我们研究深度学习的泛化性，需要更好的舞台，也就是更加合适的函数空间。</p>
+<p>kernel：研究样本之间的相关。</p>
+<p>DL：研究特征。</p>
+<p>二者之间可以使用Random Fourier Features联合在一起。</p>
+<p>还有NTK，Neural Tangent Kernel。</p>
+<p>如果神经网络足够宽，那么神经网络的复杂度可以不再在意了。<strong>越复杂越好</strong>。尽管在过程中可能会出现过拟合的情况，但是只要复杂度足够高，一力降十会。我们把这种状态称为过参数。</p>
+<p>lazy train：神经网络会学习最容易学习到的特征。所以，它起到了自正则的效果，不会学习过于复杂的对象。</p>
+<p>模型的复杂度由模型的自由度带来。那么，如果神经网络可以从少量样本得到还不错的效果，那么，这是不是意味着神经网络的参数自由度并没有我们所预想得那么高？为了要验证这一点，我们可以降维进行测试来训练这一点。</p>
+<p>对抗样本：与某样本接近，但却与之正交，导致这个样本的效果不会增加。</p>
+<p>还有一些样本，学习后不会有什么效果，即不可学习的网络。</p>
+<p>对于对抗样本，我们可以进行对抗训练，就是把对抗样本再喂回去。但是，这样做之后，在一定程度后，会导致严重的过拟合。</p>
+<p>如果在多个参数上，损失都达到了最小值，那么怎么办？一种观点是，我们选择较平坦的函数参数组。</p>
+<p>鲁棒性优化：即在每一个点的邻域附近，最坏的错误估计也足够好。使用这种估计下的梯度进行更新。</p>
+<p>这种思想，就是充分利用了数据中的随机性。</p>
+<p>泛化性究竟会趋向于由什么决定？</p>
+<p>经过数据的训练，参数是不是已经体现出网络“记住”了数据？</p>
+<p>机器能否遗忘？如何把学习到的内容擦除？</p>
+<p>恢复、保持和遗忘。</p>
+
+    </article>
+    
+    <div class="read-nums">
+      <!-- id 将作为查询条件 -->
+      <span id="2024/04/03/泛化性视角下的机器学习/" class="leancloud_visitors" data-flag-title="Your Article Title">
+        <em class="post-meta-item-text">浏览量</em>
+        <i class="leancloud-visitors-count"></i>
+      </span>
+    </div>
+    <div class="comments-intro">
+      <h2>评论区</h2>
+      <p>欢迎你留下宝贵的意见，昵称输入QQ号会显示QQ头像哦~</p>
+    </div>
+    <div id="vcomments" class="vcomments"></div>
     
   </div>
+  <div class="article-catelogue">
+    <div class="article-catelogue--wrapper">
+      <div class="catelogue catelogue-1">
+        <h3>目录</h3>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Given-By-Xiaolin-Huang"><span class="toc-number">1.</span> <span class="toc-text">Given By Xiaolin Huang</span></a></li></ol>
+      </div>
+      
+        <div class="catelogue catelogue-2">
+           
+          
+            <p>
+              <span>下一篇</span>
+              <a href="/2024/04/02/第一篇博客/">第一篇博客</a>
+            </p>
+          
+        </div>
+      
+    </div>
+  </div>
 </div>
+
+
+<script>
+  // var定义，避免pjax重新进来造成的重复声明错误
+  var config = JSON.parse('{"enable":true,"appId":"Pf8zCXGEH1qsprnWfikVVujL-gzGzoHsz","appKey":"qOqoiUHhH1TGtLRUYURkLRQX","placeholder":"请留下你宝贵的意见吧~","meta":["nick"],"recordIP":true,"visitor":true,"enableQQ":true}')
+  new Valine({
+    el: '#vcomments',
+    appId: config.appId,
+    appKey: config.appKey,
+    placeholder: config.placeholder,
+    meta: config.meta,
+    recordIP: config.recordIP,
+    visitor: config.visitor,
+    enableQQ: config.enableQQ,
+    path: '2024/04/03/泛化性视角下的机器学习/'
+  })
+</script>
+
+
+<script>
+  $(document).on('pjax:complete', function() {
+    const tocs = document.querySelector('.toc')
+    const links = tocs ? tocs.querySelectorAll('a') : []
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        const href = decodeURIComponent(e.href)
+        href.search(/#(.*)/)
+        const id = RegExp.$1
+        const target = document.querySelector('#' + id)
+        const top = target.offsetTop
+        document.documentElement.scrollTo({
+          top: top - 100,
+          behavior: 'smooth'
+        })
+        e.preventDefault()
+      })
+    })
+  })
+</script> 
 
 </div>
       <div class="main-right-wrapper"><div class="main-right">
