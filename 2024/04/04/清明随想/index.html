@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的技术与生活——categories | Hexo</title>
+  <title>我的技术与生活——清明随想 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的技术与生活——categories`
+    document.title = `我的技术与生活——清明随想`
   </script>
 <meta name="generator" content="Hexo 7.1.1"></head>
 
@@ -340,14 +340,115 @@
       <div id="main-container" class="main-container">
 
 
-  <link rel="stylesheet" href="/css/partial/categories.css" />
+  <link rel="stylesheet" href="/css/partial/article.css" />
 
-<div class="categories">
-  <h2 class="categories-title">小站分类</h2>
-  <div class="categories-list">
-    <ul class="categories-list"><li class="categories-list-item"><a class="categories-list-link" href="/categories/lecture-notes/">lecture notes</a><span class="categories-list-count">1</span></li><li class="categories-list-item"><a class="categories-list-link" href="/categories/%E7%8E%89%E5%B7%9D%E4%B9%8B%E5%BF%83%E9%9F%B3/">玉川之心音</a><span class="categories-list-count">2</span></li></ul>
+<div class="article-container">
+  <div class="article">
+    <h1 class="article-title">清明随想</h1>
+    <div class="article-info">
+      <div class="article-info--item">
+        <div class="article-info--info">
+          
+          <div class="article-info--categories">
+            <span>分类：</span>
+            <a class="category-link" href="/categories/%E7%8E%89%E5%B7%9D%E4%B9%8B%E5%BF%83%E9%9F%B3/">玉川之心音</a>
+          </div>
+          
+          
+          <div class="article-info--tags">
+            <span>标签：</span>
+            
+          </div>
+          
+          <p class="article-info--date">日期：2024-04-04 22:47:42</p>
+        </div>
+        <img src="/imgs/default-cover.webp" alt="" class="article-cover">
+      </div>
+    </div>
+    <article class="article-content markdown-body">
+      <p>先是些许吐槽吧：无论如何强调，玉川还是保留自己的观点：计算机系的学生，学习物理，意义不大。</p>
+<p>注意，玉川这里并没有说“没有意义”，而是说意义不大，“如有”。</p>
+<p>物理理论课，加上物理学实验，统共有13学分之多，等价于<strong>线性代数+程序设计+数理逻辑</strong>的学分。</p>
+<p>在玉川看来，计算机系的诸位，居然不得不把这么多时间放在物理上，不可不谓<strong>可悲</strong>。</p>
+<p>牢骚也发完了。但又能怎么办呢？<strong>不能怎么办。</strong></p>
+<p>另，今日清明，诸位安康。</p>
+<p>**”目极千里兮，伤春心。魂兮归来，哀江南！”**清明，总是让人内心感到悲伤。</p>
+
+    </article>
+    
+    <div class="read-nums">
+      <!-- id 将作为查询条件 -->
+      <span id="2024/04/04/清明随想/" class="leancloud_visitors" data-flag-title="Your Article Title">
+        <em class="post-meta-item-text">浏览量</em>
+        <i class="leancloud-visitors-count"></i>
+      </span>
+    </div>
+    <div class="comments-intro">
+      <h2>评论区</h2>
+      <p>欢迎你留下宝贵的意见，昵称输入QQ号会显示QQ头像哦~</p>
+    </div>
+    <div id="vcomments" class="vcomments"></div>
+    
+  </div>
+  <div class="article-catelogue">
+    <div class="article-catelogue--wrapper">
+      <div class="catelogue catelogue-1">
+        <h3>目录</h3>
+        
+      </div>
+      
+        <div class="catelogue catelogue-2">
+           
+          
+            <p>
+              <span>下一篇</span>
+              <a href="/2024/04/03/泛化性视角下的机器学习/">泛化性视角下的机器学习</a>
+            </p>
+          
+        </div>
+      
+    </div>
   </div>
 </div>
+
+
+<script>
+  // var定义，避免pjax重新进来造成的重复声明错误
+  var config = JSON.parse('{"enable":true,"appId":"Pf8zCXGEH1qsprnWfikVVujL-gzGzoHsz","appKey":"qOqoiUHhH1TGtLRUYURkLRQX","placeholder":"请留下你宝贵的意见吧~","meta":["nick"],"recordIP":true,"visitor":true,"enableQQ":true}')
+  new Valine({
+    el: '#vcomments',
+    appId: config.appId,
+    appKey: config.appKey,
+    placeholder: config.placeholder,
+    meta: config.meta,
+    recordIP: config.recordIP,
+    visitor: config.visitor,
+    enableQQ: config.enableQQ,
+    path: '2024/04/04/清明随想/'
+  })
+</script>
+
+
+<script>
+  $(document).on('pjax:complete', function() {
+    const tocs = document.querySelector('.toc')
+    const links = tocs ? tocs.querySelectorAll('a') : []
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        const href = decodeURIComponent(e.href)
+        href.search(/#(.*)/)
+        const id = RegExp.$1
+        const target = document.querySelector('#' + id)
+        const top = target.offsetTop
+        document.documentElement.scrollTo({
+          top: top - 100,
+          behavior: 'smooth'
+        })
+        e.preventDefault()
+      })
+    })
+  })
+</script> 
 
 </div>
       <div class="main-right-wrapper"><div class="main-right">
