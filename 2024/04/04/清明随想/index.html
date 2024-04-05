@@ -193,7 +193,7 @@
   const ipt = document.querySelector('#search-input')
   const btn = document.querySelector('#search-btn')
   const layer = document.querySelector('#search-layer')
-  const posts = JSON.parse(`[{"title":"泛化性视角下的机器学习","path":"2024/04/03/泛化性视角下的机器学习/"},{"title":"第一篇博客","path":"2024/04/02/第一篇博客/"},{"title":"清明随想","path":"2024/04/04/清明随想/"}]`)
+  const posts = JSON.parse(`[{"title":"泛化性视角下的机器学习","cover":"imgs/aya.jpg","path":"2024/04/03/泛化性视角下的机器学习/"},{"title":"第一篇博客","path":"2024/04/02/第一篇博客/"},{"title":"清明随想","cover":"imgs/tsingming.jpg","path":"2024/04/04/清明随想/"}]`)
   ipt.addEventListener('keyup', e => {
     if (e.key === 'Enter') {
       handleSearch()
@@ -362,7 +362,7 @@
           
           <p class="article-info--date">日期：2024-04-04 22:47:42</p>
         </div>
-        <img src="/imgs/default-cover.webp" alt="" class="article-cover">
+        <img src="/imgs/tsingming.jpg" alt="" class="article-cover">
       </div>
     </div>
     <article class="article-content markdown-body">
