@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>玉川的博客——tags | Hexo</title>
+  <title>玉川的博客——不会忘却的今日 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `玉川的博客——tags`
+    document.title = `玉川的博客——不会忘却的今日`
   </script>
 <meta name="generator" content="Hexo 7.1.1"></head>
 
@@ -340,14 +340,126 @@
       <div id="main-container" class="main-container">
 
 
-  <link rel="stylesheet" href="/css/partial/tags.css" />
+  <link rel="stylesheet" href="/css/partial/article.css" />
 
-<div class="tags">
-  <h2 class="tags-title">标签</h2>
-  <div class="tags-list">
+<div class="article-container">
+  <div class="article">
+    <h1 class="article-title">不会忘却的今日</h1>
+    <div class="article-info">
+      <div class="article-info--item">
+        <div class="article-info--info">
+          
+          <div class="article-info--categories">
+            <span>分类：</span>
+            <a class="category-link" href="/categories/%E7%8E%89%E5%B7%9D%E4%B9%8B%E5%BF%83%E9%9F%B3/">玉川之心音</a>
+          </div>
+          
+          
+          <div class="article-info--tags">
+            <span>标签：</span>
+            
+          </div>
+          
+          <p class="article-info--date">日期：2024-06-19 21:00:00</p>
+        </div>
+        <img src="/imgs/name.jpg" alt="" class="article-cover">
+      </div>
+    </div>
+    <article class="article-content markdown-body">
+      <p>今日的这份情感，是玉川不曾有过的。那种从内心深处萌发的情感…</p>
+<p>玉川文笔太差了，还是抄歌词吧QAQ</p>
+<p><strong>もう迷わない 君のハートに旗を立てるよ</strong></p>
+<p><strong>已不再迷惘了 我要在你的心上树一面旗帜 将其占为己有</strong></p>
+<p><strong>君は僕から諦め方を 奪い取ったの</strong></p>
+<p><strong>你已经从我这里 把“放弃”这个选项夺走了</strong></p>
+<p><strong>私たち越えるかな その先の未来数え切れぬ困難を</strong></p>
+<p><strong>我们能否跨越 未来那数不尽的困难呢</strong></p>
+<p><strong>言ったろう？二人なら 笑って返り討ちにきっとできるさ</strong></p>
+<p><strong>我不是说过了么？只要两人一起 就一定能笑着绝地反击</strong></p>
+<p><strong>君以外の武器は 他にはいらないんだ</strong></p>
+<p><strong>除你以外的武器 我都不需要</strong></p>
+<p>这是缘定的未来呢。</p>
+
+    </article>
+    
+    <div class="read-nums">
+      <!-- id 将作为查询条件 -->
+      <span id="2024/06/19/6_19/" class="leancloud_visitors" data-flag-title="Your Article Title">
+        <em class="post-meta-item-text">浏览量</em>
+        <i class="leancloud-visitors-count"></i>
+      </span>
+    </div>
+    <div class="comments-intro">
+      <h2>评论区</h2>
+      <p>欢迎你留下宝贵的意见，昵称输入QQ号会显示QQ头像哦~</p>
+    </div>
+    <div id="vcomments" class="vcomments"></div>
     
   </div>
+  <div class="article-catelogue">
+    <div class="article-catelogue--wrapper">
+      <div class="catelogue catelogue-1">
+        <h3>目录</h3>
+        
+      </div>
+      
+        <div class="catelogue catelogue-2">
+          
+            <p>
+              <span>上一篇：</span>
+              <a href="/2024/06/25/澜韵/">专场音乐会——澜韵</a>
+            </p>
+           
+          
+            <p>
+              <span>下一篇</span>
+              <a href="/2024/05/30/asca/">今日份推歌——《云雀》</a>
+            </p>
+          
+        </div>
+      
+    </div>
+  </div>
 </div>
+
+
+<script>
+  // var定义，避免pjax重新进来造成的重复声明错误
+  var config = JSON.parse('{"enable":true,"appId":"Pf8zCXGEH1qsprnWfikVVujL-gzGzoHsz","appKey":"qOqoiUHhH1TGtLRUYURkLRQX","placeholder":"请留下你宝贵的意见吧~","meta":["nick"],"recordIP":true,"visitor":true,"enableQQ":true}')
+  new Valine({
+    el: '#vcomments',
+    appId: config.appId,
+    appKey: config.appKey,
+    placeholder: config.placeholder,
+    meta: config.meta,
+    recordIP: config.recordIP,
+    visitor: config.visitor,
+    enableQQ: config.enableQQ,
+    path: '2024/06/19/6_19/'
+  })
+</script>
+
+
+<script>
+  $(document).on('pjax:complete', function() {
+    const tocs = document.querySelector('.toc')
+    const links = tocs ? tocs.querySelectorAll('a') : []
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        const href = decodeURIComponent(e.href)
+        href.search(/#(.*)/)
+        const id = RegExp.$1
+        const target = document.querySelector('#' + id)
+        const top = target.offsetTop
+        document.documentElement.scrollTo({
+          top: top - 100,
+          behavior: 'smooth'
+        })
+        e.preventDefault()
+      })
+    })
+  })
+</script> 
 
 </div>
       <div class="main-right-wrapper"><div class="main-right">
